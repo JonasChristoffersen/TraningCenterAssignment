@@ -11,6 +11,11 @@ Programmet virker, men læg mærke til, hvor meget der ligger samme sted:
 
  */
 
+//Classes som beksriver medlemmer:
+//    private ArrayList<String> memberNames;
+//    private ArrayList<Integer> memberIds;
+//    private ArrayList<String> memberTypes;
+
 public class ClassIntroduction {
     private String centerName;
 

@@ -1,4 +1,4 @@
-package composition;
+package composition;x½
 
 import java.util.Scanner;
 
@@ -16,14 +16,14 @@ efterhånden som du laver klasserne i trin 2 i TRIN2.md og TRIN3.md
 
 public class UI {
     private Scanner scan; //læser input fra brugeren med en Scanner
+    private FitnessCenter center;
+    // TODO : Når du har lavet FitnessCenter, skal UI'en have et felt til det: (FIXED)
 
-    // TODO : Når du har lavet FitnessCenter, skal UI'en have et felt til det:
-    // private FitnessCenter center;
 
-
-    public UI(Scanner scan) {
+    public UI(Scanner scan, FitnessCenter center) {
         this.scan = scan;
-        // TODO (2.6): Modtag et FitnessCenter i konstruktøren, og gem det i feltet
+        this.center = center;
+        // TODO (2.6): Modtag et FitnessCenter i konstruktøren, og gem det i feltet (FIXED)
     }
 
 
@@ -73,7 +73,7 @@ public class UI {
 
     private void printMenu() {
         System.out.println();
-        System.out.println("===== Træningscenter ====="); // TODO: Vis centerets navn i stedet
+        System.out.println("===== " + center.getName() +" ====="); // TODO: Vis centerets navn i stedet (FIXED)
         System.out.println("1. Vis alle medlemmer");
         System.out.println("2. Vis alle træningstimer");
         System.out.println("3. Vis træningstimer med ledige pladser");
@@ -89,7 +89,6 @@ public class UI {
 
     private void showAllMembers() {
         // TODO: Bed FitnessCenter om at udskrive alle medlemmer
-        //center.printAllMembers();
     }
 
     private void showAllSessions() {
